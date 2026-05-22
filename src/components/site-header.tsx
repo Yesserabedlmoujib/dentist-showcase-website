@@ -18,9 +18,9 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
+          {/* <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
             D
-          </div>
+          </div> */}
           <div className="leading-tight">
             <div className="font-serif text-lg">Dr. Amira Ben Salah</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -46,7 +46,7 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Button asChild size="sm">
             <Link to="/contact">
-              <Phone className="mr-1 h-4 w-4" /> Prendre RDV
+              <Phone className="mr-1 h-4 w-4 text-green-600" /> Prendre RDV
             </Link>
           </Button>
         </div>

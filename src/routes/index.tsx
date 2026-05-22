@@ -1,14 +1,3 @@
-// import { createFileRoute } from '@tanstack/react-router'
-
-// export const Route = createFileRoute('/')({
-//   component: RouteComponent,
-// })
-
-// function RouteComponent() {
-//   return <div>Hello "/"!</div>
-// }
-
-
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiteLayout } from "@/components/site-layout";
@@ -54,7 +43,7 @@ function HomePage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs text-muted-foreground">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-primary/10 px-3 py-1 text-xs text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               Cabinet dentaire à Kasserine
             </div>
@@ -71,19 +60,24 @@ function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg">
                 <Link to="/contact">
-                  Prendre rendez-vous <ArrowRight className="ml-1 h-4 w-4" />
+                  Prendre rendez-vous{" "}
+                  <ArrowRight className="ml-1 h-4 w-4 text-green-600" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <a href="tel:+21677000000">
-                  <Phone className="mr-1 h-4 w-4" /> +216 77 000 000
+                  <Phone className="mr-1 h-4 w-4 text-green-600" /> +216 77 000
+                  000
                 </a>
               </Button>
             </div>
             <div className="flex items-center gap-6 pt-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                  <Star
+                    key={i}
+                    className="h-4 w-4 fill-yellow-400 text-yellow-400 "
+                  />
                 ))}
               </div>
               <span>+ de 1 200 patients satisfaits</span>
@@ -140,7 +134,7 @@ function HomePage() {
               key={s.title}
               className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-card)]"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ">
                 <s.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-4 text-lg">{s.title}</h3>
@@ -176,12 +170,7 @@ function HomePage() {
             <Button asChild size="lg" variant="secondary">
               <Link to="/contact">Prendre rendez-vous</Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-            >
+            <Button asChild size="lg" variant="secondary">
               <a href="tel:+21677000000">Appeler maintenant</a>
             </Button>
           </div>

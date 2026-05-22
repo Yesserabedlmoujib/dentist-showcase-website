@@ -33,7 +33,7 @@
   --background: oklch(0.99 0.005 230);
   --foreground: oklch(0.18 0.04 240);
 
-  --primary: oklch(0.45 0.13 230);
+  --primary: oklch(72.55% 0.02258 101.161);
   --primary-foreground: oklch(0.99 0.005 230);
 
   --secondary: oklch(0.95 0.02 220);
@@ -49,7 +49,7 @@
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.45 0.13 230) 0%, oklch(0.6 0.14 210) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(66.747% 0.02021 100.319) 0%, oklch(77.793% 0.01539 98.394) 100%);
   --shadow-card: 0 8px 32px -12px oklch(0.45 0.13 230 / 0.18);
 }
 
