@@ -2,21 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Heart, Microscope, Users } from "lucide-react";
-import portrait from "@/assets/dentist-portrait.jpg";
+import portrait from "@/assets/dentist-profile.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "À propos — Dr. Amira Ben Salah" },
+      { title: "À propos — Dr. Alouani Ahmed Salah" },
       {
         name: "description",
         content:
-          "Découvrez le parcours et la philosophie du Dr. Amira Ben Salah, chirurgien-dentiste à Tunis.",
+          "Découvrez le parcours et la philosophie du Dr. Alouani Ahmed Salah, chirurgien-dentiste à Kasserine.",
       },
-      { property: "og:title", content: "À propos — Dr. Amira Ben Salah" },
+      { property: "og:title", content: "À propos — Dr. Alouani Ahmed Salah" },
       {
         property: "og:description",
-        content: "Chirurgien-dentiste diplômée à Tunis.",
+        content: "Chirurgien-dentiste à Kasserine.",
       },
     ],
   }),
@@ -56,21 +56,21 @@ function AboutPage() {
               À propos
             </div>
             <h1 className="mt-3 text-4xl md:text-5xl">
-              Dr. Amira Ben Salah,
+              Dr. Alouani Ahmed Salah,
               <br />
               <span className="italic text-primary">chirurgien-dentiste</span>
             </h1>
             <div className="mt-6 space-y-4 text-muted-foreground">
               <p>
-                Diplômée de la Faculté de Médecine Dentaire de Monastir, le Dr.
-                Ben Salah exerce depuis plus de 15 ans à Tunis. Spécialisée en
-                dentisterie esthétique et implantologie, elle a complété sa
-                formation par plusieurs diplômes universitaires en France.
+                Le Dr. Alouani Ahmed Salah accueille ses patients au Centre
+                Commercial Al Baraka à Kasserine. Spécialisé en dentisterie
+                esthétique, implantologie et prothèses, il propose une prise en
+                charge complète pour toute la famille.
               </p>
               <p>
                 Sa philosophie : allier rigueur médicale et approche humaine
                 pour offrir des soins durables, esthétiques et adaptés à chaque
-                patient.
+                patient — du simple détartrage au Hollywood Smile.
               </p>
             </div>
             <div className="mt-8">
@@ -87,7 +87,7 @@ function AboutPage() {
             />
             <img
               src={portrait}
-              alt="Dr. Amira Ben Salah, chirurgien-dentiste"
+              alt="Dr. Alouani Ahmed Salah, chirurgien-dentiste"
               width={1024}
               height={1280}
               loading="lazy"
