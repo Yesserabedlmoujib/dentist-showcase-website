@@ -2,6 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { Star } from "lucide-react";
 
+import dentist1 from "@/assets/dentist1.jpg";
+import mouth from "@/assets/mouth.jpg";
+import mouth1 from "@/assets/mouth1.jpg";
+import tools12 from "@/assets/tools12.jpg";
+import material from "@/assets/material.jpg";
+
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
@@ -22,30 +28,11 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const images = [
-  {
-    url: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900",
-    alt: "Salle de soins moderne",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900",
-    alt: "Équipement dentaire",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900",
-    alt: "Salle d'attente",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=900",
-    alt: "Consultation",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=900",
-    alt: "Stérilisation",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1551192317-d2f7acedd25b?w=900",
-    alt: "Sourire",
-  },
+  { src: dentist1, alt: "Salle de soins moderne" },
+  { src: mouth, alt: "Équipement dentaire" },
+  { src: mouth1, alt: "Salle d'attente" },
+  { src: tools12, alt: "Consultation" },
+  { src: material, alt: "Sourire" },
 ];
 
 const testimonials = [
@@ -78,10 +65,10 @@ function GalleryPage() {
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {images.map((img) => (
-            <div key={img.url} className="overflow-hidden rounded-2xl">
+          {images.map((img, index) => (
+            <div key={index} className="overflow-hidden rounded-2xl">
               <img
-                src={img.url}
+                src={img.src}
                 alt={img.alt}
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105"
