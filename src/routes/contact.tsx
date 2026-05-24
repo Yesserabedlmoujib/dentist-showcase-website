@@ -12,17 +12,10 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Rendez-vous — Cabinet Dr. Ben Salah" },
-      {
-        name: "description",
-        content:
-          "Prenez rendez-vous au cabinet Dr. Amira Ben Salah à Tunis. Adresse, téléphone, horaires.",
-      },
+      { title: "Contact & Rendez-vous — Cabinet Dr. Alouani Ahmed Salah" },
+      { name: "description", content: "Prenez rendez-vous au cabinet Dr. Alouani Ahmed Salah à Kasserine. Adresse, téléphone, horaires." },
       { property: "og:title", content: "Contact & Rendez-vous" },
-      {
-        property: "og:description",
-        content: "Réservez votre consultation à Tunis.",
-      },
+      { property: "og:description", content: "Réservez votre consultation à Kasserine." },
     ],
   }),
   component: ContactPage,
@@ -37,8 +30,7 @@ function ContactPage() {
     setTimeout(() => {
       setSubmitting(false);
       toast.success("Demande envoyée !", {
-        description:
-          "Nous vous recontacterons sous 24h pour confirmer votre RDV.",
+        description: "Nous vous recontacterons sous 24h pour confirmer votre RDV.",
       });
       (e.target as HTMLFormElement).reset();
     }, 800);
@@ -49,13 +41,11 @@ function ContactPage() {
       <Toaster richColors position="top-center" />
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="text-xs uppercase tracking-widest text-primary">
-            Contact
-          </div>
+          <div className="text-xs uppercase tracking-widest text-primary">Contact</div>
           <h1 className="mt-3 text-4xl md:text-5xl">Prenez rendez-vous</h1>
           <p className="mt-4 text-muted-foreground">
-            Remplissez le formulaire ou appelez-nous directement. Nous répondons
-            sous 24h.
+            Remplissez le formulaire ou appelez-nous directement. Nous
+            répondons sous 24h.
           </p>
         </div>
 
@@ -68,32 +58,16 @@ function ContactPage() {
               <div className="grid gap-5 md:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nom complet</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Votre nom"
-                  />
+                  <Input id="name" name="name" required placeholder="Votre nom" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Téléphone</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    placeholder="+216 ..."
-                  />
+                  <Input id="phone" name="phone" type="tel" required placeholder="+216 ..." />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="vous@example.com"
-                />
+                <Input id="email" name="email" type="email" placeholder="vous@example.com" />
               </div>
               <div className="grid gap-5 md:grid-cols-2">
                 <div className="space-y-2">
@@ -102,28 +76,14 @@ function ContactPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="reason">Motif</Label>
-                  <Input
-                    id="reason"
-                    name="reason"
-                    placeholder="Consultation, urgence..."
-                  />
+                  <Input id="reason" name="reason" placeholder="Consultation, urgence..." />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  placeholder="Décrivez brièvement votre demande"
-                />
+                <Textarea id="message" name="message" rows={4} placeholder="Décrivez brièvement votre demande" />
               </div>
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full"
-                disabled={submitting}
-              >
+              <Button type="submit" size="lg" className="w-full" disabled={submitting}>
                 {submitting ? "Envoi..." : "Envoyer ma demande"}
               </Button>
             </form>
@@ -131,28 +91,19 @@ function ContactPage() {
 
           <aside className="space-y-4 md:col-span-2">
             <InfoCard icon={MapPin} title="Adresse">
-              15 Avenue Habib Bourguiba
-              <br />
-              Tunis 1000, Tunisie
+              Centre Commercial Al Baraka<br />3ème étage, Kasserine, Tunisie
             </InfoCard>
             <InfoCard icon={Phone} title="Téléphone">
-              <a href="tel:+21671234567" className="hover:text-primary">
-                +216 71 234 567
-              </a>
+              <a href="tel:+21677000000" className="hover:text-primary">+216 77 000 000</a>
             </InfoCard>
             <InfoCard icon={Mail} title="Email">
-              <a
-                href="mailto:contact@cabinet-bensalah.tn"
-                className="hover:text-primary"
-              >
-                contact@cabinet-bensalah.tn
+              <a href="mailto:contact@cabinet-alouani.tn" className="hover:text-primary">
+                contact@cabinet-alouani.tn
               </a>
             </InfoCard>
             <InfoCard icon={Clock} title="Horaires">
-              Lun – Ven : 9h – 19h
-              <br />
-              Samedi : 9h – 14h
-              <br />
+              Lun – Ven : 9h – 19h<br />
+              Samedi : 9h – 14h<br />
               Dimanche : Urgences uniquement
             </InfoCard>
           </aside>
@@ -161,7 +112,7 @@ function ContactPage() {
         <div className="mt-16 overflow-hidden rounded-3xl border border-border">
           <iframe
             title="Localisation du cabinet"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=10.16%2C36.79%2C10.20%2C36.81&layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=8.81%2C35.15%2C8.86%2C35.18&layer=mapnik&marker=35.1675%2C8.8363"
             className="h-80 w-full"
             loading="lazy"
           />
