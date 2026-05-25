@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logooo.jpg";
 
 const nav = [
   { to: "/", label: "Accueil" },
@@ -18,11 +19,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          {/* <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
-            D
-          </div> */}
+          <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-primary">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div className="leading-tight">
-            <div className="font-serif text-lg">Dr. Amira Ben Salah</div>
+            <div className="font-serif text-lg">Dr. Alouani Ahmed Salah</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
               Cabinet Dentaire
             </div>
